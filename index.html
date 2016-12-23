@@ -1,15 +1,22 @@
-<head>
-</head>
-<body>
-<div>
-<ul>
-  {% for post in site.posts %}
-    <li>
-      <a href="{{ post.url }}">{{ post.title }}</a>
-    </li>
-  {% endfor %}
-</ul>
-</div>
+---
+layout: post
+title: blogging like a hacker
+---
 
-</body>
-
+<html>
+	<head>
+		<title>{{ page.title }}</title>
+		<meta charset="utf-8">
+	</head>
+	<body>
+		<div>
+			<ul>
+ 			 {% for post in site.posts %}
+    			<li>
+      			<a href="{{ post.url }}">{{ post.title }}</a>
+    			</li>
+  			{% endfor %}
+			</ul>
+		</div>
+	</body>
+</html>
